@@ -10,16 +10,7 @@ git clone git@github.com:discoverydn/vidora-api-client.git
 
 #### Composer
 
-Add the following to your composer.json file:
-
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/discoverydn/vidora-api-client"
-        }
-    ]
-
-Inside the require block, add "discoverydn/vidora-api-client": "1.0" and then run composer update && composer dumpautoload
+composer require discoverydn/vidora-api-client && composer dumpautoload
 
 ## Usage
 
