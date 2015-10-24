@@ -10,7 +10,7 @@ git clone git@github.com:discoverydn/vidora-api-client.git
 
 #### Composer
 
-composer require discoverydn/vidora-api-client && composer dumpautoload
+composer require discoverydn/vidora-api-client dev-master && composer dumpautoload
 
 ## Usage
 
