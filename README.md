@@ -18,9 +18,9 @@ There are two main components: the client and the request. The client uses the r
 
 example:
 
-    $vidoraClient = new \Discoverydn\Vidora\Client('api-key', 'api-secret');
+    $vidoraClient = new \Discoverydn\VidoraApiClient\Client('api-key', 'api-secret');
     
-    $request = new \Discoverydn\Vidora\Requests\UserRecommendation($vidoraClient, 'user-id', ['param1' => 'value1', 'param2' => 'value2']);
+    $request = new \Discoverydn\VidoraApiClient\Requests\UserRecommendation($vidoraClient, 'user-id', ['param1' => 'value1', 'param2' => 'value2']);
 
     $data = $vidoraClient->fetch($request); // {"items": [ {...
 
