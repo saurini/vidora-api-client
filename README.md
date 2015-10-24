@@ -24,6 +24,16 @@ example:
 
     $data = $vidoraClient->fetch($request); // {"items": [ {...
 
+#### Testing
+
+In order to fully test the code, you'll need to add a .env file with the following:
+
+    VIDORA_KEY=<your-api-key>
+    VIDORA_SECRET=<your-api-secret>
+    VIDORA_TEST_FETCH_CATEGORY=<your-test-category>
+    VIDORA_TEST_USER_ID=<your-test-user-id>
+    VIDORA_TEST_ITEM_ID=<your-test-item-id>
+
 ## Todos
 
 * Add the rest of the requests
