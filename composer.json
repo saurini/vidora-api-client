@@ -1,0 +1,27 @@
+{
+    "name": "discoverydn/vidora-api-client",
+    "description": "A library that wraps the Vidora API",
+    "type": "library",
+    "require": {
+        "php": ">=5.6",
+        "guzzlehttp/guzzle": "^6.1@dev",
+        "nesbot/carbon": "^1.20"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^2.3",
+        "vlucas/phpdotenv": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DiscoveryDN\\VidoraApiClient\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rob Saurini",
+            "email": "rob@saurini.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
