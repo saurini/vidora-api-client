@@ -28,5 +28,6 @@ example:
 
 * Add the rest of the requests
 * Add error handling
+* Add Swagger documentation
 
 
