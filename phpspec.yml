@@ -1,0 +1,4 @@
+suites:
+    vidora_suite:
+        namespace: DiscoveryDN\VidoraApiClient
+        psr4_prefix: DiscoveryDN\VidoraApiClient

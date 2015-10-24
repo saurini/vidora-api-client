@@ -1,4 +1,3 @@
-phpspec.yml
 .idea/
 /vendor/
 .env
