@@ -2,7 +2,7 @@
 
 Vidora is an AI-driven recommendaiton service that allows you to surface content via their API. The intention of this library is to make getting data from Vidora as simple as possible.
 
-## Installion
+## Installation
 
 #### Git
 
@@ -18,6 +18,8 @@ Add the following to your composer.json file:
             "url": "https://github.com/discoverydn/vidora-api-client"
         }
     ]
+
+Inside the require block, add "discoverydn/vidora-api-client": "1.0" and then run composer update && composer dumpautoload
 
 ## Usage
 
