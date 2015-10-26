@@ -1,6 +1,6 @@
 <?php namespace spec\DiscoveryDN\VidoraApiClient;
 
-use DiscoveryDN\VidoraApiClient\Requests\Personalization\ItemSimilar;
+use DiscoveryDN\VidoraApiClient\Requests\Personalization\ItemSimilarsRequest;
 use DiscoveryDN\VidoraApiClient\Client;
 
 use Carbon\Carbon;
@@ -38,7 +38,7 @@ class ClientSpec extends ObjectBehavior
             'category' => getenv('VIDORA_FETCH_TEST_CATEGORY'),
             'limit'    => 12
         ];
-        $request = new ItemSimilar($client, getenv('VIDORA_TEST_USER_ID'), getenv('VIDORA_TEST_ITEM_ID'), $params);
+        $request = new ItemSimilarsRequest($client, getenv('VIDORA_TEST_USER_ID'), getenv('VIDORA_TEST_ITEM_ID'), $params);
 
         $this->fetch($request)->shouldStartWith('{"items":');
     }

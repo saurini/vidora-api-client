@@ -1,13 +1,13 @@
 <?php namespace spec\DiscoveryDN\VidoraApiClient\Requests\Personalization;
 
-use DiscoveryDN\VidoraApiClient\Requests\Personalization\UserRecommendation;
+use DiscoveryDN\VidoraApiClient\Requests\Personalization\UserRecommendationsRequest;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
 use DiscoveryDN\VidoraApiClient\Client;
 use Carbon\Carbon;
 
-class UserRecommendationSpec extends ObjectBehavior
+class UserRecommendationsRequestSpec extends ObjectBehavior
 {
     function let()
     {
@@ -24,7 +24,7 @@ class UserRecommendationSpec extends ObjectBehavior
 
       function it_is_initializable()
     {
-        $this->shouldHaveType('DiscoveryDN\VidoraApiClient\Requests\Personalization\UserRecommendation');
+        $this->shouldHaveType('DiscoveryDN\VidoraApiClient\Requests\Personalization\UserRecommendationsRequest');
     }
 
     function it_can_add_params()

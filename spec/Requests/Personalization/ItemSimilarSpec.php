@@ -1,13 +1,13 @@
 <?php namespace spec\DiscoveryDN\VidoraApiClient\Requests\Personalization;
 
-use DiscoveryDN\VidoraApiClient\Requests\Personalization\ItemSimilar;
+use DiscoveryDN\VidoraApiClient\Requests\Personalization\ItemSimilarsRequest;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
 use DiscoveryDN\VidoraApiClient\Client;
 use Carbon\Carbon;
 
-class ItemSimilarSpec extends ObjectBehavior
+class ItemSimilarsRequestSpec extends ObjectBehavior
 {
     function let()
     {
@@ -24,7 +24,7 @@ class ItemSimilarSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('DiscoveryDN\VidoraApiClient\Requests\Personalization\ItemSimilar');
+        $this->shouldHaveType('DiscoveryDN\VidoraApiClient\Requests\Personalization\ItemSimilarsRequest');
     }
 
     function it_can_add_params()

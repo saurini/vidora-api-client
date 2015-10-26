@@ -1,16 +1,16 @@
-<?php namespace Discoverydn\VidoraApiClient\Requests\Personalization;
+<?php namespace DiscoveryDN\VidoraApiClient\Requests\Personalization;
 
 use DiscoveryDN\VidoraApiClient\Requests\Request;
 use DiscoveryDN\VidoraApiClient\Client;
 
 use Carbon\Carbon;
 
-class ItemSimilar extends Request
+class UserRecommendationsRequest extends Request
 {
-    public function __construct(Client $client, $userId, $itemId, Array $params = [])
+    public function __construct(Client $client, $userId, Array $params = [])
     {
         $this->setClient($client);
-        $this->setPath('/v1/users/' . $userId . '/items/' . $itemId . '/similars');
+        $this->setPath('/v1/users/' . $userId . '/recommendations');
         $this->setMethod('GET');
 
         // Add a default params
