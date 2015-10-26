@@ -21,6 +21,5 @@ class ItemSimilarsRequest extends Request
 
         // Params added here will override the defaults
         $this->addParams($params);
-
     }
 }

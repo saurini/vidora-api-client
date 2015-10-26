@@ -5,12 +5,12 @@ use DiscoveryDN\VidoraApiClient\Client;
 
 use Carbon\Carbon;
 
-class PopularItemsRequest extends Request
+class RecentlyWatchedRequest extends Request
 {
-    public function __construct(Client $client, Array $params = [])
+    public function __construct(Client $client, $userId, Array $params = [])
     {
         $this->setClient($client);
-        $this->setPath('/v1/items/popular');
+        $this->setPath('/v1/users/' . $userId . '/recently_watched');
         $this->setMethod('GET');
 
         // Add a default params
