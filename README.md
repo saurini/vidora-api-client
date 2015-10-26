@@ -39,5 +39,6 @@ In order to fully test the code, you'll need to add a .env file with the followi
 * Add the rest of the requests
 * Add error handling
 * Add Swagger documentation
+* Make the library compatible with earlier versions of PHP (aiming for 5.5+)
 
 
