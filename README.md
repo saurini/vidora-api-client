@@ -20,7 +20,7 @@ example:
 
     $vidoraClient = new \Discoverydn\VidoraApiClient\Client('api-key', 'api-secret');
     
-    $request = new \Discoverydn\VidoraApiClient\Requests\UserRecommendationsRequest($vidoraClient, 'user-id', ['param1' => 'value1', 'param2' => 'value2']);
+    $request = new \Discoverydn\VidoraApiClient\Requests\Personalization\UserRecommendationsRequest($vidoraClient, 'user-id', ['param1' => 'value1', 'param2' => 'value2']);
 
     $data = $vidoraClient->fetch($request); // {"items": [ {...
 
