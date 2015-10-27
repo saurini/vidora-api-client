@@ -1,6 +1,5 @@
 <?php namespace spec\DiscoveryDN\VidoraApiClient\Requests\Personalization;
 
-use DiscoveryDN\VidoraApiClient\Requests\Personalization\UserRecommendationsRequest;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
