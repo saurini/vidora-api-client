@@ -20,7 +20,9 @@
     "authors": [
         {
             "name": "Rob Saurini",
-            "email": "rob@saurini.com"
+            "email": "rob_saurini@discovery.com",
+            "homepage": "http://discoverydn.com",
+            "role": "developer"
         }
     ],
     "minimum-stability": "stable"
