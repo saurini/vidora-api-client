@@ -14,7 +14,9 @@ composer require discoverydn/vidora-api-client dev-master && composer dumpautolo
 
 ## Usage
 
-There are two main components: the client and the request. The client uses the request to fetch data from the API.
+There are two main components: the client and the request. The client uses the request to fetch data from the API. Currently,
+only the [Personalization API](http://api.vidora.com/#/developers/personalization-api) is supported, but eventually the
+[Behavioral API](http://api.vidora.com/#/developers/behavioral-api) will be added.
 
 example:
 
@@ -37,8 +39,7 @@ In order to fully test the code, you'll need to add a .env file with the followi
 ## Todos
 
 * Add the rest of the requests
+* Add tests for all Requests
 * Add error handling
 * Add Swagger documentation
 * Make the library compatible with earlier versions of PHP (aiming for 5.5+)
-
-
