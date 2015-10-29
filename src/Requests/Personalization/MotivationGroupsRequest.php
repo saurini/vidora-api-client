@@ -16,7 +16,7 @@ class MotivationGroup extends Request
         // Add a default params
         $this->addParams([
             'api_key' => $client->getApiKey(),
-            'expires' => (new Carbon('UTC'))->addHours(1)->format('Y-m-d\TH:i'),
+            'expires' => (new Carbon(null, 'UTC'))->addHours(1)->format('Y-m-d\TH:i'),
         ]);
     }
 }
