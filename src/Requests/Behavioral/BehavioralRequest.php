@@ -18,11 +18,11 @@ class BehavioralRequest extends Request
         'sent',
     ];
 
-    public function __construct(Client $client, $userId, $itemId, $type, Array $params = [])
+    public function __construct(Client $client, $userId, $itemId, $type, Array $params = [], Array $data = [])
     {
         $this->setClient($client);
-        //$this->setPath('/v1/users/' . $userId . '/items/' . $itemId . '/similars');
-        //$this->setMethod('GET');
+        $this->setPath('/v1/validate');
+        $this->setMethod('POST');
 
         if (! in_array($type, self::types)) {
             throw new \Exception('Invalid type selected. It must be one of: ' . implode(', ', self::types));
@@ -36,5 +36,7 @@ class BehavioralRequest extends Request
 
         // Params added here will override the defaults
         $this->addParams($params);
+
+        $this->addData($data);
     }
 }

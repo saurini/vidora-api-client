@@ -30,9 +30,16 @@ class Client
         return $this->apiSecret;
     }
 
-    public function fetch(Request $request)
+    public function get(Request $request)
     {
         $result = $this->httpClient->request($request->getMethod(), $request->getSignedUrl());
         return $result->getBody() . ''; // cast to a string
+    }
+
+    public function post(Request $request)
+    {
+        $result = $this->httpClient->request($request->getMethod(), $request->getSignedUrl(), [
+            'body' => $request->getBody()
+        ]);
     }
 }

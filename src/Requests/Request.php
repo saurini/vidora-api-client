@@ -19,6 +19,11 @@ abstract class Request
         ksort($this->params);
     }
 
+    public function addData(Array $data)
+    {
+        // Todo: do things
+    }
+
     public function setClient(Client $client)
     {
         $this->client = $client;
