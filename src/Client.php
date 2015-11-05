@@ -32,13 +32,13 @@ class Client
 
     public function get(Request $request)
     {
-        $result = $this->httpClient->request($request->getMethod(), $request->getSignedUrl());
+        $result = $this->httpClient->request('GET', $request->getSignedUrl());
         return $result->getBody() . ''; // cast to a string
     }
 
     public function post(Request $request)
     {
-        $result = $this->httpClient->request($request->getMethod(), $request->getSignedUrl(), [
+        $result = $this->httpClient->request('POST', $request->getSignedUrl(), [
             'body' => $request->getBody()
         ]);
     }
