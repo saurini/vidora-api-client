@@ -18,6 +18,8 @@ class Event {
     public function addData(Array $data)
     {
         $this->data = array_merge($this->data, $data);
+
+        return $this;
     }
 
     public function __toString()
