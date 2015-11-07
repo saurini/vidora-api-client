@@ -11,7 +11,6 @@ class UIGroupRankingsRequest extends Request
     {
         $this->setClient($client);
         $this->setPath('/v1/users/' . $userId . '/groups/' . $groupId . '/items');
-        $this->setMethod('GET');
 
         // Add a default params
         $this->addParams([

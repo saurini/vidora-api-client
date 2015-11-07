@@ -8,6 +8,7 @@ use Carbon\Carbon;
 
 class BehavioralRequest extends Request
 {
+    const method = 'POST';
     const types = [
         'play',
         'playhead_update',
@@ -25,7 +26,6 @@ class BehavioralRequest extends Request
     {
         $this->setClient($client);
         $this->setPath('/v1/validate');
-        $this->setMethod('POST');
 
         if (! in_array($type, self::types)) {
             throw new \Exception('Invalid type selected. It must be one of: ' . implode(', ', self::types));

@@ -35,11 +35,11 @@ class ClientSpec extends ObjectBehavior
         $client = new Client(getenv('VIDORA_KEY'), getenv('VIDORA_SECRET'));
 
         $params = [
-            'category' => getenv('VIDORA_FETCH_TEST_CATEGORY'),
+            'category' => getenv('VIDORA_GET_TEST_CATEGORY'),
             'limit'    => 12
         ];
         $request = new ItemSimilarsRequest($client, getenv('VIDORA_TEST_USER_ID'), getenv('VIDORA_TEST_ITEM_ID'), $params);
 
-        $this->fetch($request)->shouldStartWith('{"items":');
+        $this->get($request)->shouldStartWith('{"items":');
     }
 }

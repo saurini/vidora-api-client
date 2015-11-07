@@ -11,7 +11,6 @@ class ItemSimilarsRequest extends Request
     {
         $this->setClient($client);
         $this->setPath('/v1/users/' . $userId . '/items/' . $itemId . '/similars');
-        $this->setMethod('GET');
 
         // Add a default params
         $this->addParams([

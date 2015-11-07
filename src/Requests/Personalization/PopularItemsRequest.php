@@ -11,7 +11,6 @@ class PopularItemsRequest extends Request
     {
         $this->setClient($client);
         $this->setPath('/v1/items/popular');
-        $this->setMethod('GET');
 
         // Add a default params
         $this->addParams([

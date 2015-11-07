@@ -11,7 +11,6 @@ class RecentlyWatchedRequest extends Request
     {
         $this->setClient($client);
         $this->setPath('/v1/users/' . $userId . '/recently_watched');
-        $this->setMethod('GET');
 
         // Add a default params
         $this->addParams([

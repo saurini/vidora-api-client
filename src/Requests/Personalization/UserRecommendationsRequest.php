@@ -11,7 +11,6 @@ class UserRecommendationsRequest extends Request
     {
         $this->setClient($client);
         $this->setPath('/v1/users/' . $userId . '/recommendations');
-        $this->setMethod('GET');
 
         // Add a default params
         $this->addParams([

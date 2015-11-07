@@ -32,12 +32,20 @@ class Client
 
     public function get(Request $request)
     {
+        if ($request->getMethod() != 'GET') {
+            throw new \Exception('Invalid method for this request. You must use GET.');
+        }
+
         $result = $this->httpClient->request('GET', $request->getSignedUrl());
         return $result->getBody() . ''; // cast to a string
     }
 
     public function post(Request $request)
     {
+        if ($request->getMethod() != 'POST') {
+            throw new \Exception('Invalid method for this request. You must use POST.');
+        }
+
         $result = $this->httpClient->request('POST', $request->getSignedUrl(), [
             'body' => $request->getBody()
         ]);

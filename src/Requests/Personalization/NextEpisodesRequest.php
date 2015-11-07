@@ -11,7 +11,6 @@ class NextEpisodesRequest extends Request
     {
         $this->setClient($client);
         $this->setPath('/v1/users/' . $userId . '/next_episodes');
-        $this->setMethod('GET');
 
         // Add a default params
         $this->addParams([

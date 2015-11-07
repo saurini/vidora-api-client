@@ -11,7 +11,6 @@ class TopUsersRequest extends Request
     {
         $this->setClient($client);
         $this->setPath('/v1/items/' . $itemId . '/top_users');
-        $this->setMethod('GET');
 
         // Add a default params
         $this->addParams([

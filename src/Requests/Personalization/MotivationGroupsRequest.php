@@ -11,7 +11,6 @@ class MotivationGroup extends Request
     {
         $this->setClient($client);
         $this->setPath('/v1/users/' . $userId . '/motivation_groups');
-        $this->setMethod('GET');
 
         // Add a default params
         $this->addParams([

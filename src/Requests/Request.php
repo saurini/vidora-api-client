@@ -5,9 +5,9 @@ use DiscoveryDN\VidoraApiClient\Client;
 abstract class Request
 {
     const API_BASE = 'api.vidora.com';
+    const METHOD = 'GET';
 
     private $client;
-    private $method;
     private $path;
     private $body = '';
     private $params = [];
@@ -36,13 +36,6 @@ abstract class Request
         return $this;
     }
 
-    public function setMethod($method)
-    {
-        $this->method = strtoupper($method);
-
-        return $this;
-    }
-
     public function setBody($body)
     {
         $this->body = $body;
@@ -62,7 +55,7 @@ abstract class Request
 
     public function getMethod()
     {
-        return $this->method;
+        return self::METHOD;
     }
 
     public function getBody()
