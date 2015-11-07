@@ -7,10 +7,11 @@ abstract class Request
     const API_BASE = 'api.vidora.com';
     const METHOD = 'GET';
 
-    protected $client;
-    protected $path;
+    private $client;
+    private $path;
+    private $params = [];
+
     protected $body = '';
-    protected $params = [];
 
     public function addParams(Array $params)
     {
