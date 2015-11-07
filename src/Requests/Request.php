@@ -17,27 +17,37 @@ abstract class Request
         $this->params = array_merge($this->params, $params);
 
         ksort($this->params);
+
+        return $this;
     }
 
     public function setClient(Client $client)
     {
         $this->client = $client;
+
+        return $this;
     }
 
     public function setPath($path)
     {
         $path = '/' . trim($path, '/');
         $this->path = $path;
+
+        return $this;
     }
 
     public function setMethod($method)
     {
         $this->method = strtoupper($method);
+
+        return $this;
     }
 
     public function setBody($body)
     {
         $this->body = $body;
+
+        return $this;
     }
 
     public function getParams()
