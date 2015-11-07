@@ -46,6 +46,10 @@ class Client
             throw new \Exception('Invalid method for this request. You must use POST.');
         }
 
+        if (empty($request->getBody())) {
+           throw new \Exception('Missing body. There is nothing to POST.');
+        }
+
         $result = $this->httpClient->request('POST', $request->getSignedUrl(), [
             'body' => $request->getBody()
         ]);
