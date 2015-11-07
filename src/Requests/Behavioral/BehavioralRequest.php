@@ -44,5 +44,7 @@ class BehavioralRequest extends Request
     public function addEvent(Event $event)
     {
         $this->events[] = $event;
+
+        return $this;
     }
 }
