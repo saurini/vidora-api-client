@@ -2,7 +2,7 @@
 
 class Event {
 
-    const required = [
+    const REQUIRED = [
         'user_id',
         'content_id',
         'type'
@@ -22,9 +22,14 @@ class Event {
         return $this;
     }
 
+    public function toString()
+    {
+        return $this . '';
+    }
+
     public function __toString()
     {
-        if (count(array_intersect(self::required, ($this->data))) != count(self::required)) {
+        if (count(array_intersect(self::REQUIRED, array_keys($this->data))) != count(self::REQUIRED)) {
             return '';
         }
 
