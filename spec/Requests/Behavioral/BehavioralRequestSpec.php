@@ -38,6 +38,4 @@ class BehavioralRequestSpec extends ObjectBehavior
         $this->addEvent($event1)->addEvent($event2)->addEvent($event3)->addEvent($event4)->shouldReturn($this);
         $this->events->shouldHaveCount(4);
     }
-
-
 }
