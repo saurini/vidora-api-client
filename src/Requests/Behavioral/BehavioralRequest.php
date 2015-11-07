@@ -2,6 +2,7 @@
 
 use DiscoveryDN\VidoraApiClient\Requests\Request;
 use DiscoveryDN\VidoraApiClient\Client;
+use DiscoveryDN\VidoraApiClient\Events\Event;
 
 use Carbon\Carbon;
 
@@ -18,7 +19,9 @@ class BehavioralRequest extends Request
         'sent',
     ];
 
-    public function __construct(Client $client, $userId, $itemId, $type, Array $params = [], Array $data = [])
+    public $events = [];
+
+    public function __construct(Client $client, $userId, $itemId, $type, Array $params = [])
     {
         $this->setClient($client);
         $this->setPath('/v1/validate');
@@ -36,7 +39,10 @@ class BehavioralRequest extends Request
 
         // Params added here will override the defaults
         $this->addParams($params);
+    }
 
-        $this->addData($data);
+    public function addEvent(Event $event)
+    {
+        $this->events[] = $event;
     }
 }
