@@ -12,7 +12,7 @@ class BehavioralRequestSpec extends ObjectBehavior
     {
         $apiKey = 'VidoraTest.7baffc459cd6047b7a059f697681c04e';
         $apiSecret = '08F9113D69E5E913705147D7C882202621B00C79BECF57B434';
-        $this->beConstructedWith(new Client($apiKey, $apiSecret), 12345, 678910, 'click');
+        $this->beConstructedWith(new Client($apiKey, $apiSecret), 12345);
     }
 
     function it_is_initializable()

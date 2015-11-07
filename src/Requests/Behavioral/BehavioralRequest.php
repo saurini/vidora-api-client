@@ -8,28 +8,14 @@ use Carbon\Carbon;
 
 class BehavioralRequest extends Request
 {
-    const method = 'POST';
-    const types = [
-        'play',
-        'playhead_update',
-        'share',
-        'like',
-        'purchase',
-        'click',
-        'shown',
-        'sent',
-    ];
+    const METHOD = 'POST';
 
     public $events = [];
 
-    public function __construct(Client $client, $userId, $itemId, $type, Array $params = [])
+    public function __construct(Client $client, $userId, Array $params = [])
     {
         $this->setClient($client);
         $this->setPath('/v1/validate');
-
-        if (! in_array($type, self::types)) {
-            throw new \Exception('Invalid type selected. It must be one of: ' . implode(', ', self::types));
-        }
 
         // Add a default params
         $this->addParams([

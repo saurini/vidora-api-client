@@ -8,6 +8,17 @@ class Event {
         'type'
     ];
 
+    const TYPES = [
+        'play',
+        'playhead_update',
+        'share',
+        'like',
+        'purchase',
+        'click',
+        'shown',
+        'sent',
+    ];
+
     private $data = [];
 
     public function __construct(Array $data = [])
@@ -17,6 +28,10 @@ class Event {
 
     public function addData(Array $data)
     {
+        if (array_key_exists('type', $data) && ! in_array($data['type'], self::TYPES)) {
+            throw new \Exception('Type not supported. It must be one of: ' . implode(', ', self::TYPES));
+        }
+
         $this->data = array_merge($this->data, $data);
 
         return $this;
