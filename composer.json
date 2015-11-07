@@ -3,7 +3,7 @@
     "description": "A library that wraps the Vidora API",
     "type": "library",
     "require": {
-        "php": ">=5.5.30",
+        "php": ">=5.6",
         "guzzlehttp/guzzle": "^6.1@dev",
         "nesbot/carbon": "^1.20"
     },
