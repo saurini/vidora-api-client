@@ -33,8 +33,3 @@ In order to fully test the code, you'll need to add a .env file with the followi
     VIDORA_TEST_FETCH_CATEGORY=<your-test-category>
     VIDORA_TEST_USER_ID=<your-test-user-id>
     VIDORA_TEST_ITEM_ID=<your-test-item-id>
-
-## Todos
-
-* Add tests for all Requests
-* Add error handling
