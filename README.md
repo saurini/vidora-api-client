@@ -14,9 +14,7 @@ composer require discoverydn/vidora-api-client dev-master && composer dumpautolo
 
 ## Usage
 
-There are two main components: the client and the request. The client uses the request to fetch data from the API. Currently,
-only the [Personalization API](http://api.vidora.com/#/developers/personalization-api) is supported, but eventually the
-[Behavioral API](http://api.vidora.com/#/developers/behavioral-api) will be added.
+There are two main components: the client and the request. The client uses the request to fetch data from the API. The Vidora API has two main types of requests Behavioral, which POSTs data and Personalization, which GETs data.
 
 example:
 
@@ -38,7 +36,5 @@ In order to fully test the code, you'll need to add a .env file with the followi
 
 ## Todos
 
-* Add the rest of the requests
 * Add tests for all Requests
 * Add error handling
-* Add Swagger documentation
