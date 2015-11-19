@@ -14,7 +14,7 @@ composer require discoverydn/vidora-api-client dev-master && composer dumpautolo
 
 ## Usage
 
-There are two main components: the client and the request. The client uses the request to fetch data from the API. The Vidora API has two main types of requests Behavioral, which POSTs data and Personalization, which GETs data.
+There are two main components: the client and the request. The client uses the request to fetch data from the API. The Vidora API has two main types of requests: Behavioral, which POSTs data and Personalization which GETs data.
 
 example:
 
